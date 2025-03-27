@@ -13,8 +13,8 @@ public class Ejercicio9 {
             super(msg);
         }
     }
-    private static class NullPointerInStringArray extends NullPointerException {
-        private NullPointerInStringArray(String msg) {
+    private static class NullPointerInStringArrayException extends NullPointerException {
+        private NullPointerInStringArrayException(String msg) {
             super(msg);
         }
     }
@@ -49,8 +49,8 @@ public class Ejercicio9 {
         for (int i = 0; i < copia.length; i++) {
             try {
                 copia[i] = String.valueOf(arr[i].length());
-            }catch (NullPointerInStringArray npe) {
-                throw new NullPointerInStringArray("Se ha encontrado un null en el array de Strings");
+            }catch (NullPointerInStringArrayException npe) {
+                throw new NullPointerInStringArrayException("Se ha encontrado un null en el array de Strings");
             }
         }
         return copia;
